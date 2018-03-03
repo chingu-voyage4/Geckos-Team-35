@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body{
+    height: 100%;
+}
+
 .screen{
     position: fixed;
     top: 0;
@@ -22,4 +27,28 @@
     height: 100vh;
     -o-object-fit: cover;
     object-fit: cover;
+}
+
+.aside_left{
+    float: left;
+    width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+.aside_right{
+    float: right;
+    width: 160px;
+    margin: 0;
+    padding: 1em;
+}
+
+.white{
+    color:white;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
