@@ -8,6 +8,7 @@ import { TimeComponent } from './components/time/time.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
+import { TodoCardComponent } from './components/todo-list/todo-card/todo-card.component';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { TodoListComponent } from './components/todo-list/todo-list.component';
     TimeComponent,
     WeatherComponent,
     QuotesComponent,
-    TodoListComponent
+    TodoListComponent,
+    TodoCardComponent
   ],
   imports: [
     BrowserModule
