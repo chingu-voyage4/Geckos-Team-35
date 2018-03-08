@@ -22,7 +22,9 @@ body {
   flex-direction: column;
   text-align: center;
 }
+
 /*Background styles*/
+
 .screen {
   position: fixed;
   top: 0;
@@ -47,7 +49,9 @@ body {
   -o-object-fit: cover;
   object-fit: cover;
 }
+
 /*Asides styles*/
+
 .aside_left,
 .aside_right {
   width: 160px;
@@ -61,10 +65,13 @@ body {
 .aside_left {
   align-self: flex-start;
 }
+
 /*Footer styles*/
+
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
   display: flex;
+  justify-content: flex-end;
 }
