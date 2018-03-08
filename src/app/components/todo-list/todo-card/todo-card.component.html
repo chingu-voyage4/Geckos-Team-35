@@ -1,5 +1,5 @@
 <div class="todo-card" [ngClass]="{'closed': isClassVisible }">
-  <input type="text" placeholder="Add a new Todo" class="todo-input">
+  <input type="text" placeholder="Add a new Todo" class="todo-input" [(ngModel)]="todoText" value={{todoText}} (keyup.enter)="addTodo()">
 
   <ul>
 
