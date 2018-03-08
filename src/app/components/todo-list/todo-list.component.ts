@@ -12,4 +12,7 @@ export class TodoListComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick() {
+    console.log('Ojala que llueva cafe en el campo!');
+  }
 }
