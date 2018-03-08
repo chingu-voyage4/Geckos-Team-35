@@ -56,3 +56,8 @@ input[type="checkbox"]:checked+.todo-wrapper {
   color: gray;
   transition: all 0.2s ease-out;
 }
+
+.todo-btn {
+  cursor: pointer;
+  padding: 12px;
+}
