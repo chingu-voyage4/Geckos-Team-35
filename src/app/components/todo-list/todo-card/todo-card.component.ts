@@ -12,13 +12,13 @@ export class TodoCardComponent implements OnInit {
   public todoText: string;
   isClassVisible: false;
 
-  constructor() { this.todoText = ''; }
+  constructor(private todoService: TodoService) { this.todoText = ''; }
 
   ngOnInit() {
   }
 
   public addTodo(): void {
-    console.log('TODO ', this.todoText);
+    this.todoService.addTodo(this.todoText);
     this.todoText = '';
   }
 
