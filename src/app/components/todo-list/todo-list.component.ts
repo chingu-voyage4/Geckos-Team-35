@@ -7,12 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoListComponent implements OnInit {
 
+
+
   constructor() { }
 
   ngOnInit() {
   }
 
-  onClick() {
-    console.log('Ojala que llueva cafe en el campo!');
-  }
 }

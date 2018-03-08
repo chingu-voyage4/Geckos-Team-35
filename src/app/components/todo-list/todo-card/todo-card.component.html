@@ -1,4 +1,4 @@
-<div class="todo-card closed">
+<div class="todo-card" [ngClass]="{'closed': isClassVisible }">
   <input type="text" placeholder="Add a new Todo" class="todo-input">
 
   <ul>
@@ -13,3 +13,5 @@
   </ul>
 
 </div>
+
+<span class="todo-btn" (click)="isClassVisible = !isClassVisible;">Todo</span>
