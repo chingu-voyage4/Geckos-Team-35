@@ -21,3 +21,11 @@
   background-color: transparent;
   overflow: hidden;
 }
+
+.todo-input::placeholder {
+  color: white;
+}
+
+input {
+  color: white;
+}
