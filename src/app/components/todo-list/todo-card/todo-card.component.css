@@ -19,4 +19,5 @@
   border: 0;
   border-bottom: 1px solid white;
   background-color: transparent;
+  overflow: hidden;
 }
