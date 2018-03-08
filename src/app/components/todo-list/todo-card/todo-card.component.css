@@ -64,4 +64,10 @@ input[type="checkbox"]:checked+.todo-wrapper {
   right: 12px;
   bottom: 5px;
   padding: 8px;
+  opacity: 0.8;
+}
+
+.todo-btn:hover {
+  opacity: 1;
+  transition: all 0.4s ease-out;
 }
