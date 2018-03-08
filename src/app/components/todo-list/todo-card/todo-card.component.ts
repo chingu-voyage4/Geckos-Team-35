@@ -7,10 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TodoCardComponent implements OnInit {
 
+  public todoText: string;
   isClassVisible: false;
-  constructor() { }
+  constructor() { this.todoText = ''; }
 
   ngOnInit() {
+  }
+
+  public addTodo(): void {
+    console.log('TODO ', this.todoText);
+    this.todoText = '';
   }
 
 }
