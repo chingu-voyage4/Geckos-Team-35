@@ -33,4 +33,11 @@ input {
 
 .list-style {
   margin-top: 8px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+.todo-wrapper {
+  width: 300px;
+  word-wrap: break-word;
 }
