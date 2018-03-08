@@ -1,0 +1,11 @@
+.todo-card {
+  width: 320px;
+  position: absolute;
+  height: 510px;
+  right: 0;
+  top: 110px;
+  background-color: black;
+  opacity: 0.8;
+  border-radius: 5px;
+  margin-right: 10px;
+}
