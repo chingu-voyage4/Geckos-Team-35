@@ -58,6 +58,9 @@ input[type="checkbox"]:checked+.todo-wrapper {
 }
 
 .todo-btn {
+  position: absolute;
   cursor: pointer;
-  padding: 12px;
+  right: 12px;
+  bottom: 5px;
+  padding: 8px;
 }
