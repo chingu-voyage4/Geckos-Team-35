@@ -41,3 +41,9 @@ input {
   width: 300px;
   word-wrap: break-word;
 }
+
+input[type="checkbox"]:checked+.todo-wrapper {
+  text-decoration: line-through;
+  color: gray;
+  transition: all 0.2s ease-out;
+}
