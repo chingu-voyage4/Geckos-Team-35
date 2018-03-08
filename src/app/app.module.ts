@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { SettingsComponent } from './components/settings/settings.component';
@@ -23,7 +24,8 @@ import { TodoCardComponent } from './components/todo-list/todo-card/todo-card.co
     TodoCardComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
