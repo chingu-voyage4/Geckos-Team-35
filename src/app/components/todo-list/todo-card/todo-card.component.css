@@ -30,3 +30,7 @@
 input {
   color: white;
 }
+
+.list-style {
+  margin-top: 8px;
+}
