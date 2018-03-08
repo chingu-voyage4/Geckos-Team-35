@@ -2,9 +2,10 @@
   "name": "insp-app",
   "version": "0.0.0",
   "license": "MIT",
+  "main":"app.js",
   "scripts": {
     "ng": "ng",
-    "start": "node server.js",
+    "start": "ng serve",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -23,10 +24,11 @@
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
     "core-js": "^2.4.1",
+    "express": "^4.16.2",
     "moment": "^2.20.1",
     "rxjs": "^5.5.6",
-    "zone.js": "^0.8.19",
-    "typescript": "~2.5.3"
+    "typescript": "~2.5.3",
+    "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular/cli": "1.6.5",
