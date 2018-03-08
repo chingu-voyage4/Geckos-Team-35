@@ -10,6 +10,7 @@ import { WeatherComponent } from './components/weather/weather.component';
 import { QuotesComponent } from './components/quotes/quotes.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoCardComponent } from './components/todo-list/todo-card/todo-card.component';
+import { TodoService } from './services/todo.service';
 
 
 @NgModule({
@@ -27,7 +28,9 @@ import { TodoCardComponent } from './components/todo-list/todo-card/todo-card.co
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    TodoService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
