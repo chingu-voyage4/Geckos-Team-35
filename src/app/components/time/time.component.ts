@@ -8,11 +8,16 @@ import * as moment from 'moment';
 })
 export class TimeComponent implements OnInit {
 
-now = moment().format('LTS');
+  now;
 
   constructor() {
-   }
+    this.setTime();
+  }
 
-  ngOnInit() {  }
+  ngOnInit() { }
+
+  setTime() {
+    setInterval(() => this.now = moment().format('LT'), 1000);
+  }
 
 }
