@@ -46,18 +46,18 @@ body {
   object-fit: cover;
 }
 
-.aside_left {
-  float: left;
+.aside_left,
+.aside_right {
   width: 160px;
-  margin: 0;
   padding: 1em;
 }
 
 .aside_right {
-  float: right;
-  width: 160px;
-  margin: 0;
-  padding: 1em;
+  align-self: flex-end;
+}
+
+.aside_left {
+  align-self: flex-start;
 }
 
 footer {
