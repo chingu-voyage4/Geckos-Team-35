@@ -1,14 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
 
+/*Reset styles*/
+
 * {
   padding: 0;
   margin: 0;
 }
 
+/*Global styles*/
+
 html,
 body {
   height: 100%;
   color: white;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .screen {
