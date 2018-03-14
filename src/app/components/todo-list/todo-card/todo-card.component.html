@@ -1,0 +1,17 @@
+<div class="todo-card" [ngClass]="{'closed': isClassVisible }">
+  <input type="text" placeholder="Add a new Todo" class="todo-input" [(ngModel)]="todoText" value={{todoText}} (keyup.enter)="addTodo()">
+
+  <ul>
+
+    <li class="list-style">
+      <input type="checkbox">
+      <span class="todo-wrapper">
+        Hey
+      </span>
+    </li>
+
+  </ul>
+
+</div>
+
+<span class="todo-btn" (click)="isClassVisible = !isClassVisible;">Todo</span>
