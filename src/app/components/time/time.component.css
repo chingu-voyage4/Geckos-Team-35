@@ -7,6 +7,8 @@
   font-weight: 300;
 }
 
+/*****************************/
+
 input,
 span,
 label,
@@ -96,7 +98,7 @@ textarea.question + label > span {
   margin: 0;
   position: absolute;
   color: white;
-  font-size: 3rem;
+  font-size: 2.5rem;
   top: -66px;
   z-index: -1;
   -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
@@ -143,3 +145,4 @@ textarea.question:invalid ~ input[type="submit"] {
     opacity: 1;
   }
 }
+/************************************************/
