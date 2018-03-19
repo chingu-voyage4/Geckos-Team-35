@@ -1,12 +1,15 @@
+
 <div class="tshadow d-flex justify-content-center">
   <h1 class="display-1">{{now}}</h1>
 </div>
 <div class="tshadow">
   <h2 class="prettyFont">Good Morning, Name </h2>
 </div>
+<br/>
 <div class="tshadow justify-content-center">
-  <input type="text" name="name" class="question" id="nme" required autocomplete="off" />
-  <label for="nme">
-    <span>What's your main focus for today?</span>
+  <input  type="text" name="name" [(ngModel)]="nombre" (keyup.enter)=setName() class="question" id="nme" required autocomplete="off" />
+  <label for="nme" >
+    <span>{{question1}}</span>
   </label>
+  {{nombre}}
 </div>
