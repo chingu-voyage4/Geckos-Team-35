@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
+import { TimeService } from './time.service';
 
 @Component({
   selector: 'app-time',
@@ -8,17 +9,14 @@ import * as moment from 'moment';
 })
 export class TimeComponent implements OnInit {
   now;
+  question1;
+  nombre;
+  greeting: string;
 
-  question1: String = `What's your name?`;
-  nombre: String = '';
-  greeting: String;
-
-  constructor() {
+  constructor(private _timeService: TimeService) {
     this.setTime();
-    this.greetings();
-    // verificar el si tiene nombre;
-    // cambiar la pregunta 2da pregunta;
-    // agregar el metodo de guardar el nombre en localStorage;
+    this.greetingStatus();
+    this.changeQuestion();
   }
 
   ngOnInit() { }
@@ -28,11 +26,21 @@ export class TimeComponent implements OnInit {
   }
 
   setName() {
-    localStorage.setItem('name', JSON.stringify({ name: this.nombre }));
+    if (!this.isUserExist()) {
+      this._timeService.saveName(this.nombre);
+    }
   }
 
-  greetings() {
-    const localStorageItem = JSON.parse(localStorage.getItem('name'));
+  greetingStatus() {
+    const localStorageItem = this._timeService.getName();
     this.greeting = localStorageItem ? `Good Evening, ${localStorageItem}` : 'Good Evening';
+  }
+
+  isUserExist() {
+    return this._timeService.getName();
+  }
+
+  changeQuestion() {
+    this.question1 = this.isUserExist() ? `What's your main focus for today?` : `What's your name?`;
   }
 }
