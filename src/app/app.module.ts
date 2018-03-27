@@ -11,11 +11,11 @@ import { QuotesComponent } from './components/quotes/quotes.component';
 import { TodoListComponent } from './components/todo-list/todo-list.component';
 import { TodoCardComponent } from './components/todo-list/todo-card/todo-card.component';
 
-//services
+// services
 
 import { TodoService } from './services/todo.service';
 import { BackgroundService } from './components/background/background.service';
-
+import { TimeService } from './components/time/time.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import { BackgroundService } from './components/background/background.service';
   ],
   providers: [
     TodoService,
-    BackgroundService
+    BackgroundService,
+    TimeService
   ],
   bootstrap: [AppComponent]
 })

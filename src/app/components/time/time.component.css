@@ -7,6 +7,60 @@
   font-weight: 300;
 }
 
+
+.flexContainerCenter{
+  display:flex; 
+  flex-direction:row; 
+  justify-content: center
+}
+
+/*******/
+
+input:checked+p {
+  text-decoration: line-through;
+}
+
+.close {
+  position: relative;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+.close:hover::before, .close:hover::after {
+  background: #1ebcc5;
+}
+.close::before, .close::after {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  margin-top: -1px;
+  background:white;
+}
+.close::before {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.close::after {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+.close.blades::before, .close.blades::after {
+  border-radius: 5px 0;
+}
+
+/*******/
+
 /*****************************/
 
 input,
