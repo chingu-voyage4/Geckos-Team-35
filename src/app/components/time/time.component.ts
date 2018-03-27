@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as moment from 'moment';
-import { TimeService } from './time.service';
+import { TimeService, User } from './time.service';
 
 @Component({
   selector: 'app-time',
@@ -10,37 +10,53 @@ import { TimeService } from './time.service';
 export class TimeComponent implements OnInit {
   now;
   question1;
-  nombre;
+  user: User = new User();
+  hasName = true;
   greeting: string;
+  actualTask;
 
   constructor(private _timeService: TimeService) {
+
     this.setTime();
     this.greetingStatus();
-    this.changeQuestion();
+    //  this.changeQuestion();
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.hasName = this.isUserExist();
+    this.actualTask = this._timeService.getActualTask();
+  }
 
   setTime() {
     setInterval(() => (this.now = moment().format('LT')), 1000);
   }
 
-  setName() {
-    if (!this.isUserExist()) {
-      this._timeService.saveName(this.nombre);
+  setUser() {
+    if (!this.isUserExist) {
+      this._timeService.saveUser(this.user);
+      this.hasName = true;
+      this.greetingStatus();
+    } else {
+      this._timeService.saveUser(this.user);
+      this.actualTask = this.user.task;
+      this.user.task = '';
     }
   }
 
+  deleteActualTask() {
+    this._timeService.deleteActualTask();
+    this.actualTask = null;
+  }
+
   greetingStatus() {
-    const localStorageItem = this._timeService.getName();
-    this.greeting = localStorageItem ? `Good Evening, ${localStorageItem}` : 'Good Evening';
+    this.user = this._timeService.getUser();
+    this.greeting = this.user ? `Good Evening, ${this.user.name}` : 'Good Evening';
   }
 
   isUserExist() {
-    return this._timeService.getName();
+    return this._timeService.getUser().name ? true : false;
   }
 
-  changeQuestion() {
-    this.question1 = this.isUserExist() ? `What's your main focus for today?` : `What's your name?`;
-  }
+
+
 }

@@ -1,4 +1,3 @@
-
 <div class="tshadow d-flex justify-content-center">
   <h1 class="display-1">{{now}}</h1>
 </div>
@@ -7,8 +6,23 @@
 </div>
 <br/>
 <div class="tshadow justify-content-center">
-  <input  type="text" name="name" [(ngModel)]="nombre" (keyup.enter)=setName() class="question" id="nme" required autocomplete="off" />
-  <label for="nme" >
-    <span>{{question1}}</span>
-  </label>
+  <div *ngIf="!hasName">
+    <input type="text" name="name" [(ngModel)]="user.name" (keyup.enter)=setUser() class="question" id="nme1" required autocomplete="off"
+    />
+    <label for="nme1">
+      <span>What's your name?</span>
+    </label>
+  </div>
+  <div *ngIf="hasName && !actualTask">
+      <input type="text" name="task" [(ngModel)]="user.task" (keyup.enter)=setUser() class="question" id="nme2" required autocomplete="off"
+      />
+      <label for="nme2">
+        <span>What's your main focus for today?</span>
+      </label>
+    </div>
+</div>
+<div *ngIf="actualTask" class="flexContainerCenter tshadow">
+  <input type="checkbox">
+  <p>{{actualTask}}</p>
+  <span (click)="deleteActualTask()" class="close blades black"></span>
 </div>
