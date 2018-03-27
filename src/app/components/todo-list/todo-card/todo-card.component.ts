@@ -10,7 +10,8 @@ import { TodoService } from '../../../services/todo.service';
 export class TodoCardComponent implements OnInit {
 
   public todoText: string;
-  isClassVisible: false;
+  // tslint:disable-next-line:no-inferrable-types
+  isClassVisible: boolean = false;
 
   constructor(private todoService: TodoService) { this.todoText = ''; }
 
