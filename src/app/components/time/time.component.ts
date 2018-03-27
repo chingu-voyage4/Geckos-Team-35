@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit  } from '@angular/core';
 import * as moment from 'moment';
 import { TimeService, User } from './time.service';
 
@@ -19,7 +19,7 @@ export class TimeComponent implements OnInit {
 
     this.setTime();
     this.greetingStatus();
-    //  this.changeQuestion();
+
   }
 
   ngOnInit() {
@@ -35,6 +35,7 @@ export class TimeComponent implements OnInit {
     if (!this.isUserExist) {
       this._timeService.saveUser(this.user);
       this.hasName = true;
+      this.greeting = '';
       this.greetingStatus();
     } else {
       this._timeService.saveUser(this.user);
@@ -50,7 +51,7 @@ export class TimeComponent implements OnInit {
 
   greetingStatus() {
     this.user = this._timeService.getUser();
-    this.greeting = this.user ? `Good Evening, ${this.user.name}` : 'Good Evening';
+    this.greeting = this.user.name != null ? `Good Evening, ${this.user.name}` : 'Good Evening';
   }
 
   isUserExist() {
