@@ -71,7 +71,6 @@ textarea {
   display: block;
   color: white;
   border: none;
-  font-size: 1.5rem;
 }
 
 textarea:focus,
@@ -110,16 +109,17 @@ textarea.question:focus+label {
 
 input.question:focus,
 input.question:valid {
-  padding-top: 35px;
+  padding-top: 10px;
 }
 
 textarea.question:valid,
 textarea.question:focus {
-  margin-top: 35px;
+  margin-top: 10px;
 }
 
 input.question:focus+label>span,
-input.question:valid+label>span {
+input.question:valid+label>span textarea.question:focus+label>span,
+textarea.question:valid+label>span {
   top: -100px;
   font-size: 2rem;
   color: white;
@@ -128,8 +128,6 @@ input.question:valid+label>span {
 textarea.question:focus+label>span,
 textarea.question:valid+label>span {
   top: -150px;
-  font-size: 2rem;
-  color: white;
 }
 
 input.question:valid+label,
