@@ -1,4 +1,5 @@
 <div class="tshadow d-flex justify-content-center">
+
   <h1 class="display-1">{{now}}</h1>
 </div>
 <div class="tshadow">
@@ -14,12 +15,12 @@
     </label>
   </div>
   <div *ngIf="hasName && !actualTask">
-      <input type="text" name="task" [(ngModel)]="user.task" (keyup.enter)=setUser() class="question" id="nme2" required autocomplete="off"
-      />
-      <label for="nme2">
-        <span>What's your main focus for today?</span>
-      </label>
-    </div>
+    <input type="text" name="task" [(ngModel)]="user.task" (keyup.enter)=setUser() class="question" id="nme2" required autocomplete="off"
+    />
+    <label for="nme2">
+      <span>What's your main focus for today?</span>
+    </label>
+  </div>
 </div>
 <div *ngIf="actualTask" class="flexContainerCenter tshadow">
   <input type="checkbox">
