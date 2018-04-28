@@ -3,10 +3,6 @@
   color: white;
 }
 
-.prettyFont {
-  font-weight: 300;
-}
-
 .flexContainerCenter {
   display: flex;
   flex-direction: row;
