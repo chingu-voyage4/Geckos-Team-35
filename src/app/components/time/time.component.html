@@ -14,7 +14,7 @@
       <span>What's your name?</span>
     </label>
   </div>
-  <div *ngIf="hasName && !actualTask">
+  <div *ngIf="hasName && !actualTask" class="input-size">
     <input type="text" name="task" [(ngModel)]="user.task" (keyup.enter)=setUser() class="question" id="nme2" required autocomplete="off"
     />
     <label for="nme2">

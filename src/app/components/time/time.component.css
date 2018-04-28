@@ -71,6 +71,7 @@ textarea {
   display: block;
   color: white;
   border: none;
+  text-align: center;
 }
 
 textarea:focus,
@@ -83,7 +84,6 @@ input:focus {
 input.question,
 textarea.question {
   font-size: 2rem;
-  margin-left: 25%;
   background: transparent;
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
   overflow-x: hidden;
@@ -96,15 +96,14 @@ textarea.question+label {
   display: block;
   position: relative;
   white-space: nowrap;
-  margin-left: 25%;
-  width: 10%;
+  width: 200px;
   border-top: 1px solid red;
   transition: width 0.4s ease;
 }
 
 input.question:focus+label,
 textarea.question:focus+label {
-  width: 50%;
+  width: 400px;
 }
 
 input.question:focus,
@@ -118,16 +117,17 @@ textarea.question:focus {
 }
 
 input.question:focus+label>span,
-input.question:valid+label>span textarea.question:focus+label>span,
-textarea.question:valid+label>span {
+input.question:valid+label>span {
   top: -100px;
-  font-size: 2rem;
+  font-size: 1.7rem;
   color: white;
 }
 
 textarea.question:focus+label>span,
 textarea.question:valid+label>span {
   top: -150px;
+  font-size: 1.7rem;
+  color: white;
 }
 
 input.question:valid+label,
@@ -140,16 +140,15 @@ textarea.question:invalid {
   box-shadow: none;
 }
 
+/*Question style*/
+
 input.question+label>span,
 textarea.question+label>span {
-  font-weight: 200;
-  margin: 0;
   position: absolute;
   color: white;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
   top: -66px;
   z-index: -1;
-  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
   transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
 }
 
@@ -202,4 +201,32 @@ textarea.question:invalid~input[type="submit"] {
   .display-1 {
     font-size: 20vw;
   }
+  /*
+  input.question+label>span,
+  textarea.question+label>span {
+    position: absolute;
+    color: white;
+    font-size: 1.0rem;
+    top: -66px;
+    z-index: -1;
+    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  }
+  textarea.question:focus+label>span,
+  textarea.question:valid+label>span {
+    top: -150px;
+    font-size: 10px;
+    color: white;
+  }
+  input.question:focus+label>span,
+  input.question:valid+label>span {
+    top: -100px;
+    font-size: 1rem;
+    color: white;
+  }
+  .input-size {
+    display: flex;
+    justify-content: center;
+    align-items: center
+  }
+  */
 }
