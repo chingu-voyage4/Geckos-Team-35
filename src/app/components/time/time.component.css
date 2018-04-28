@@ -97,13 +97,10 @@ textarea.question+label {
   display: block;
   position: relative;
   white-space: nowrap;
-  padding: 0;
   margin-left: 25%;
   width: 10%;
   border-top: 1px solid red;
-  -webkit-transition: width 0.4s ease;
   transition: width 0.4s ease;
-  height: 0px;
 }
 
 input.question:focus+label,
