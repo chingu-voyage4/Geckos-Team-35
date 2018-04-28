@@ -23,6 +23,13 @@ body {
   text-align: center;
 }
 
+.time-style {
+  display: flex;
+  padding-top: 20vh;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+
 /*Background styles*/
 
 .screen {
