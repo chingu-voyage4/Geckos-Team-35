@@ -6,7 +6,7 @@
   <h2>{{greeting}}</h2>
 </div>
 <br/>
-<div class="tshadow justify-content-center">
+<div class="tshadow">
   <div *ngIf="!hasName">
     <input type="text" name="name" [(ngModel)]="user.name" (keyup.enter)=setUser() class="question" id="nme1" required autocomplete="off"
     />
