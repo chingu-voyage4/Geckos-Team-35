@@ -7,10 +7,9 @@
   font-weight: 300;
 }
 
-
-.flexContainerCenter{
-  display:flex; 
-  flex-direction:row; 
+.flexContainerCenter {
+  display: flex;
+  flex-direction: row;
   justify-content: center
 }
 
@@ -27,10 +26,14 @@ input:checked+p {
   height: 25px;
   overflow: hidden;
 }
-.close:hover::before, .close:hover::after {
+
+.close:hover::before,
+.close:hover::after {
   background: #1ebcc5;
 }
-.close::before, .close::after {
+
+.close::before,
+.close::after {
   content: '';
   position: absolute;
   height: 2px;
@@ -38,8 +41,9 @@ input:checked+p {
   top: 50%;
   left: 0;
   margin-top: -1px;
-  background:white;
+  background: white;
 }
+
 .close::before {
   -webkit-transform: rotate(45deg);
   -moz-transform: rotate(45deg);
@@ -47,6 +51,7 @@ input:checked+p {
   -o-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
 .close::after {
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
@@ -55,7 +60,8 @@ input:checked+p {
   transform: rotate(-45deg);
 }
 
-.close.blades::before, .close.blades::after {
+.close.blades::before,
+.close.blades::after {
   border-radius: 5px 0;
 }
 
@@ -79,6 +85,7 @@ input:focus {
 }
 
 /* Question */
+
 input.question,
 textarea.question {
   font-size: 2rem;
@@ -89,12 +96,14 @@ textarea.question {
   width: 50%;
   background: rgba(0, 0, 0, 0);
   transition: padding-top 0.2s ease, margin-top 0.2s ease;
-  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  overflow-x: hidden;
+  /* Hack to make "rows" attribute apply in Firefox. */
 }
 
 /* Underline and Placeholder */
-input.question + label,
-textarea.question + label {
+
+input.question+label,
+textarea.question+label {
   display: block;
   position: relative;
   white-space: nowrap;
@@ -107,8 +116,8 @@ textarea.question + label {
   height: 0px;
 }
 
-input.question:focus + label,
-textarea.question:focus + label {
+input.question:focus+label,
+textarea.question:focus+label {
   width: 50%;
 }
 
@@ -122,22 +131,22 @@ textarea.question:focus {
   margin-top: 35px;
 }
 
-input.question:focus + label > span,
-input.question:valid + label > span {
+input.question:focus+label>span,
+input.question:valid+label>span {
   top: -100px;
   font-size: 2rem;
   color: white;
 }
 
-textarea.question:focus + label > span,
-textarea.question:valid + label > span {
+textarea.question:focus+label>span,
+textarea.question:valid+label>span {
   top: -150px;
   font-size: 2rem;
   color: white;
 }
 
-input.question:valid + label,
-textarea.question:valid + label {
+input.question:valid+label,
+textarea.question:valid+label {
   border-color: green;
 }
 
@@ -146,8 +155,8 @@ textarea.question:invalid {
   box-shadow: none;
 }
 
-input.question + label > span,
-textarea.question + label > span {
+input.question+label>span,
+textarea.question+label>span {
   font-weight: 200;
   margin: 0;
   position: absolute;
@@ -177,14 +186,14 @@ input[type="submit"]:active {
   background: #999;
 }
 
-input.question:valid ~ input[type="submit"],
-textarea.question:valid ~ input[type="submit"] {
+input.question:valid~input[type="submit"],
+textarea.question:valid~input[type="submit"] {
   -webkit-animation: appear 1s forwards;
   animation: appear 1s forwards;
 }
 
-input.question:invalid ~ input[type="submit"],
-textarea.question:invalid ~ input[type="submit"] {
+input.question:invalid~input[type="submit"],
+textarea.question:invalid~input[type="submit"] {
   display: none;
 }
 
@@ -199,4 +208,5 @@ textarea.question:invalid ~ input[type="submit"] {
     opacity: 1;
   }
 }
+
 /************************************************/
