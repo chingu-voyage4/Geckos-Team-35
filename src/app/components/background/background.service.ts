@@ -5,7 +5,7 @@ export class BackgroundService {
 
   private urlImages = 'https://source.unsplash.com/category/nature/1920x1080';
 
-  constructor() {}
+  constructor() { }
 
   getRandom() {
     return this.urlImages;
