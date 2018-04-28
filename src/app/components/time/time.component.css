@@ -210,28 +210,24 @@ textarea.question:invalid~input[type="submit"] {
   .display-1 {
     font-size: 20vw;
   }
-  /*
-  input.question+label>span,
-  textarea.question+label>span {
-    position: absolute;
-    color: white;
-    font-size: 1.0rem;
-    top: -66px;
-    z-index: -1;
-    transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  input.question+label,
+  textarea.question+label {
+    width: 50%;
   }
-  textarea.question:focus+label>span,
-  textarea.question:valid+label>span {
-    top: -150px;
-    font-size: 10px;
-    color: white;
+  input.question:focus+label,
+  textarea.question:focus+label {
+    width: 90%;
   }
   input.question:focus+label>span,
   input.question:valid+label>span {
-    top: -100px;
-    font-size: 1rem;
-    color: white;
+    font-size: 6vmin;
   }
-  
-  */
+  textarea.question:focus+label>span,
+  textarea.question:valid+label>span {
+    font-size: 6vmin;
+  }
+  input.question+label>span,
+  textarea.question+label>span {
+    font-size: 6vmin;
+  }
 }
