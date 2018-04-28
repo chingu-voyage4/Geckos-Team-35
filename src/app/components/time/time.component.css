@@ -17,21 +17,44 @@
 
 /*******/
 
+input[type=checkbox],
+input[type=radio] {
+  box-sizing: border-box;
+  margin-right: 20px;
+  position: relative;
+  top: 17px;
+  width: 17px;
+  height: 17px;
+}
+
+input+p {
+  font-size: 2rem;
+}
+
 input:checked+p {
   text-decoration: line-through;
+  font-size: 2rem;
+  opacity: 0.7;
 }
 
 .close {
   position: relative;
+  top: 13px;
   display: inline-block;
   width: 25px;
   height: 25px;
+  margin-left: 20px;
   overflow: hidden;
+}
+
+.close:hover {
+  animation: delete 1s ease-in-out infinite;
 }
 
 .close:hover::before,
 .close:hover::after {
   background: #1ebcc5;
+  transition: all 0.3s ease-out;
 }
 
 .close::before,
@@ -43,7 +66,7 @@ input:checked+p {
   top: 50%;
   left: 0;
   margin-top: -1px;
-  background: white;
+  background: rgb(165, 0, 18);
 }
 
 .close::before {
@@ -66,8 +89,6 @@ input:checked+p {
 .close.blades::after {
   border-radius: 5px 0;
 }
-
-/*******/
 
 /*****************************/
 
@@ -199,6 +220,13 @@ textarea.question:invalid~input[type="submit"] {
 @keyframes appear {
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes delete {
+  100% {
+    transform: rotate(360deg);
+    transform: scale(2);
   }
 }
 
