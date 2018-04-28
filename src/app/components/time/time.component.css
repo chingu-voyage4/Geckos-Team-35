@@ -2,6 +2,13 @@
   text-shadow: 0 0 20px #000;
 }
 
+.input-size {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .flexContainerCenter {
   display: flex;
   flex-direction: row;
@@ -93,7 +100,9 @@ textarea.question {
 
 input.question+label,
 textarea.question+label {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   white-space: nowrap;
   width: 200px;
@@ -223,10 +232,6 @@ textarea.question:invalid~input[type="submit"] {
     font-size: 1rem;
     color: white;
   }
-  .input-size {
-    display: flex;
-    justify-content: center;
-    align-items: center
-  }
+  
   */
 }
